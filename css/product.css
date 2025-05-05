@@ -1,0 +1,124 @@
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container-product {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  /* Sidebar - Filtres */
+  .sidebar {
+    flex: 1 1 200px;
+    max-width: 250px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-right: 20px;
+  }
+  
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .sidebar input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .sidebar button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Partie Produits */
+  .products-page {
+    flex: 3 1 600px;
+  }
+  
+  .product-grid-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-list {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s;
+  }
+  
+  .product-list:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .product-list p {
+    margin: 5px 0;
+  }
+  
+  /* Le bouton Ajouter */
+  .product-list .add-to-cart-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .product-list .add-to-cart-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive pour Mobile */
+  @media (max-width: 768px) {
+    .container-product {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .products-page {
+      flex: 1 1 100%;
+    }
+  }
+  

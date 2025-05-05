@@ -1,0 +1,256 @@
+/* Global Styling */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fond gris clair */
+    color: #333; /* Texte gris foncé */
+    line-height: 1.6;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout Styling */
+.container {
+    display: flex;
+    min-height: 100vh; /* Changed from height to min-height for better content handling */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #1c1c1c; /* Fond noir pour la sidebar */
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #f4f4f4; /* Gris clair pour le titre */
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #f4f4f4; /* Lien en gris clair */
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #333333; /* Gris plus foncé au survol */
+}
+
+/* Logout button in Sidebar */
+.logout-btn {
+    background-color: #e74c3c; /* Rouge pour le bouton de déconnexion */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b; /* Rouge plus foncé au survol */
+}
+
+/* Main Content Styling */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white; /* Fond blanc pour le contenu principal */
+    overflow-y: auto;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1c1c1c; /* Texte en noir */
+}
+
+/* Sections Styling */
+.profile-info,
+.orders,
+.payment-methods,
+.history {
+    background-color: #f9f9f9; /* Gris très clair pour les sections */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre pour le relief */
+}
+
+.profile-info h2,
+.orders h2,
+.payment-methods h2,
+.history h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1c1c1c; /* Titre en noir */
+}
+
+/* Order and Item Details */
+.order-header {
+    padding: 20px; /* Augmenter le padding pour plus d'espace */
+    background-color: #fff; /* Fond blanc */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-header h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.order-header p {
+    margin-bottom: 5px;
+}
+
+/* Style pour les tableaux de commande */
+.order-details {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px; /* Augmenter le padding dans la section de détails */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-details th,
+.order-details td {
+    padding: 16px; /* Augmenter l'espacement pour plus de clarté */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word; /* Permet aux longs mots de se couper */
+}
+
+.order-details th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.order-details td img {
+    max-width: 80px; /* Augmenter légèrement la taille de l'image */
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Payment Methods */
+.payment-item {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Profile Information */
+.profile-info p {
+    margin-bottom: 10px;
+}
+ .orders{
+	height: 400px  ;
+	overflow: scroll ;
+ }
+.edit-btn {
+    background-color: #333; /* Bouton gris foncé */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: #1c1c1c; /* Bouton noir au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .order-details {
+        overflow-x: scroll;
+    }
+
+    .order-details table {
+        min-width: 500px; /* Assure une largeur minimale pour le tableau */
+    }
+
+    .order-header h3 {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Fusionne les bordures pour une apparence uniforme */
+	
+}
+
+
+
+.order-row {
+    border-bottom: 2px solid #ddd; 
+}
+
+
+
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 4px;
+}

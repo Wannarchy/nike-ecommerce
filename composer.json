@@ -1,0 +1,17 @@
+{
+    "name": "joe/e-commerce",
+    "autoload": {
+        "psr-4": {
+            "Joe\\ECommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "joachim"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "stripe/stripe-php": "^17.2@beta"
+    }
+}

@@ -1,0 +1,37 @@
+  <?php 
+                              if (isUserLoggedIn() && isset($_SESSION['connectedUser']['id'])):
+                                $user_id = $_SESSION['connectedUser']['id'];
+                                $cart_item = getCartItems($user_id);
+                            ?>
+
+<input type="hidden" id="prix" name="prix" value="<?php echo $produit['prix'];?>">
+
+
+foreach ($newproduits as $produit): ?>
+
+
+
+  $cartItem = getCartItems(0);
+
+foreach ($cartItem as $cartItems): ?>
+     <img src="<?php echo $itemCarts['image_url']; ?>"   alt="<?php echo htmlspecialchars($itemCart['nom']); ?>">
+
+<?php endforeach; ?>
+_____
+
+<?php
+                         $user_id = $_SESSION['connectedUser']['id'];
+
+                        $cartItem = getCartItems($user_id);
+           
+                foreach ($cartItem as $cartItems): ?>
+                    <div  data-product-id= "<?php echo $cartItems['id']; ?>" >
+                 
+                        <img src="<?php echo $cartItems['image_url']; ?>"
+                            alt="<?php echo htmlspecialchars($cartItems['nom']); ?>"  >
+                        <p><?php echo htmlspecialchars($cartItems['nom']); ?></p>
+                        <p><?php echo number_format($cartItems['prix'], 2, ',', ' '); ?> $</p>
+
+
+                    </div>
+            <?php endforeach; ?>
